@@ -138,123 +138,134 @@ export default function LogoReveal({ onTransitionComplete, onLogoDissolve }) {
           A Night Of Musical Brilliance
         </motion.div>
 
-        {/* Brand Text Row */}
-        <motion.div
-          variants={textSweepVariants}
-          style={{
-            position: 'relative',
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'flex-start',
-            alignItems: 'baseline',
-          }}
-        >
-          {/* EPILOGUE Glow Stroke Background */}
-          <span
-            style={{
-              fontFamily: "'HK Modular', 'Orbitron', sans-serif",
-              fontSize: 'clamp(2.5rem, 10vw, 6.6rem)',
-              fontWeight: 'bold',
-              letterSpacing: '0.08em',
-              color: 'transparent',
-              WebkitTextStroke: '2.5px #43a43c',
-              filter: 'drop-shadow(0 0 8px rgba(67, 164, 60, 0.95)) drop-shadow(0 0 20px rgba(67, 164, 60, 0.5))',
-              lineHeight: '1.0',
-              textTransform: 'uppercase',
-            }}
-          >
-            EPILOGUE
-          </span>
-
-          {/* EPILOGUE Sharp White Core Foreground */}
-          <span
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              fontFamily: "'HK Modular', 'Orbitron', sans-serif",
-              fontSize: 'clamp(2.5rem, 10vw, 6.6rem)',
-              fontWeight: 'bold',
-              letterSpacing: '0.08em',
-              color: 'transparent',
-              WebkitTextStroke: '1px #ffffff',
-              lineHeight: '1.0',
-              textTransform: 'uppercase',
-              pointerEvents: 'none',
-            }}
-          >
-            EPILOGUE
-          </span>
-        </motion.div>
-
-        {/* Underline + 26 Row */}
+        {/* Brand Text + Underline & 26 Container */}
         <div
           style={{
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            width: '100%',
-            marginTop: 'clamp(8px, 2.5vh, 16px)',
+            flexDirection: 'column',
+            alignItems: 'stretch',
+            width: 'fit-content',
+            position: 'relative',
           }}
         >
-          {/* Glowing Energy Underline Rod */}
+          {/* Brand Text Row */}
           <motion.div
-            variants={underlineVariants}
-            style={{
-              flex: 1, // dynamically fills all empty space
-              height: 'clamp(4px, 1.2vw, 8px)',
-              background: 'linear-gradient(90deg, #2a6c24 0%, #43a43c 50%, #ffffff 70%, #43a43c 90%, #193118 100%)',
-              boxShadow: '0 0 10px rgba(67, 164, 60, 0.8)',
-              borderRadius: '4px',
-              originX: 0, // sweeps from left to right
-            }}
-          />
-
-          {/* Number 26 Wrapper (anchored on the right end) */}
-          <motion.div
-            variants={numVariants}
-            className="neon-flicker"
+            variants={textSweepVariants}
             style={{
               position: 'relative',
-              display: 'inline-flex',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'flex-start',
               alignItems: 'baseline',
-              marginLeft: 'clamp(12px, 3.5vw, 24px)', // precise spacing gap
-              height: 'fit-content',
             }}
           >
-            {/* Number 26 Glow Stroke Background */}
+            {/* EPILOGUE Glow Stroke Background */}
             <span
               style={{
-                fontFamily: "'Astren', 'Orbitron', sans-serif",
-                fontSize: 'clamp(1.5rem, 5.2vw, 3.5rem)',
+                fontFamily: "'HK Modular', 'Orbitron', sans-serif",
+                fontSize: 'clamp(2.5rem, 10vw, 6.6rem)',
                 fontWeight: 'bold',
+                letterSpacing: '0.08em',
                 color: 'transparent',
                 WebkitTextStroke: '2.5px #43a43c',
-                filter: 'drop-shadow(0 0 8px rgba(67, 164, 60, 0.95)) drop-shadow(0 0 15px rgba(67, 164, 60, 0.5))',
+                filter: 'drop-shadow(0 0 8px rgba(67, 164, 60, 0.95)) drop-shadow(0 0 20px rgba(67, 164, 60, 0.5))',
                 lineHeight: '1.0',
+                textTransform: 'uppercase',
               }}
             >
-              26
+              EPILOGUE
             </span>
 
-            {/* Number 26 Sharp White Core Foreground */}
+            {/* EPILOGUE Sharp White Core Foreground */}
             <span
               style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
-                fontFamily: "'Astren', 'Orbitron', sans-serif",
-                fontSize: 'clamp(1.5rem, 5.2vw, 3.5rem)',
+                fontFamily: "'HK Modular', 'Orbitron', sans-serif",
+                fontSize: 'clamp(2.5rem, 10vw, 6.6rem)',
                 fontWeight: 'bold',
+                letterSpacing: '0.08em',
                 color: 'transparent',
                 WebkitTextStroke: '1px #ffffff',
                 lineHeight: '1.0',
+                textTransform: 'uppercase',
                 pointerEvents: 'none',
               }}
             >
-              26
+              EPILOGUE
             </span>
           </motion.div>
+
+          {/* Underline + 26 Row */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%',
+              marginTop: 'clamp(8px, 2.5vh, 16px)',
+            }}
+          >
+            {/* Glowing Energy Underline Rod */}
+            <motion.div
+              variants={underlineVariants}
+              style={{
+                flex: 1, // dynamically fills all empty space
+                height: 'clamp(4px, 1.2vw, 8px)',
+                background: 'linear-gradient(90deg, #2a6c24 0%, #43a43c 50%, #ffffff 70%, #43a43c 90%, #193118 100%)',
+                boxShadow: '0 0 10px rgba(67, 164, 60, 0.8)',
+                borderRadius: '4px',
+                originX: 0, // sweeps from left to right
+              }}
+            />
+
+            {/* Number 26 Wrapper (anchored on the right end) */}
+            <motion.div
+              variants={numVariants}
+              className="neon-flicker"
+              style={{
+                position: 'relative',
+                display: 'inline-flex',
+                alignItems: 'baseline',
+                marginLeft: 'clamp(12px, 3.5vw, 24px)', // precise spacing gap
+                height: 'fit-content',
+              }}
+            >
+              {/* Number 26 Glow Stroke Background */}
+              <span
+                style={{
+                  fontFamily: "'Astren', 'Orbitron', sans-serif",
+                  fontSize: 'clamp(1.5rem, 5.2vw, 3.5rem)',
+                  fontWeight: 'bold',
+                  color: 'transparent',
+                  WebkitTextStroke: '2.5px #43a43c',
+                  filter: 'drop-shadow(0 0 8px rgba(67, 164, 60, 0.95)) drop-shadow(0 0 15px rgba(67, 164, 60, 0.5))',
+                  lineHeight: '1.0',
+                }}
+              >
+                26
+              </span>
+
+              {/* Number 26 Sharp White Core Foreground */}
+              <span
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  fontFamily: "'Astren', 'Orbitron', sans-serif",
+                  fontSize: 'clamp(1.5rem, 5.2vw, 3.5rem)',
+                  fontWeight: 'bold',
+                  color: 'transparent',
+                  WebkitTextStroke: '1px #ffffff',
+                  lineHeight: '1.0',
+                  pointerEvents: 'none',
+                }}
+              >
+                26
+              </span>
+            </motion.div>
+          </div>
         </div>
       </motion.div>
     </motion.div>

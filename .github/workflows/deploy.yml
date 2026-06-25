@@ -2,9 +2,9 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targeting the main or dashintha-dev branches
+  # Runs on pushes targeting the main branch
   push:
-    branches: ["main", "dashintha-dev"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
